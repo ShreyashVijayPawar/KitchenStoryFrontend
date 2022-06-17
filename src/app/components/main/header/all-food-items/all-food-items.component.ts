@@ -21,4 +21,10 @@ export class AllFoodItemsComponent implements OnInit {
   ngOnInit(): void {
     this.allFoodItems = this.foodService.getAllFoodItems();
   }
+
+  deleteFood(id){
+    this.foodService.deleteFoodItem(id);
+
+  }
+
 }

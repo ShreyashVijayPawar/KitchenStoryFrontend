@@ -17,6 +17,7 @@ import { SearchComponent } from './components/main/header/search/search.componen
 import { HomeComponent } from './components/main/header/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/main/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddNewFoodComponent,
     HomeComponent,
     PageNotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

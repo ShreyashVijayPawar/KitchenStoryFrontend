@@ -1,0 +1,35 @@
+.ng-touched .ng-invalid {
+  border: 1px solid red;
+}
+.card {
+  background-color: peru;
+  margin: 2% 30%;
+  border-radius: 2%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card-header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: x-large;
+  color: brown;
+}
+.card-body {
+  padding: 2% 5% 1% 5%;
+}
+label {
+  font-weight: bold;
+}
+div.form-group {
+  margin-bottom: 5px;
+}
+button {
+  margin-top: 5px;
+  transition: 1s;
+}
+button:hover {
+    background-color: #28a745!important;
+    transform: scale(1.05);
+}
+span {
+  padding: 2px;
+}

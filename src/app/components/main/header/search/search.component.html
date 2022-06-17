@@ -7,21 +7,18 @@
           <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
             <div>
               <div class="form-group">
-                <label for="foodCategory"
-                  >Please Enter Food Category
-                  <span class="text-muted"
-                    >(Ex.
-                    Burger,Noodles,Pancakes,Pasta,Pizza,Salad,Sandwich,Soup)</span
-                  >
-                </label>
-                <input
-                  type="text"
-                  name="foodCategory"
-                  id="foodCategory"
-                  class="form-control"
-                  formControlName="foodCategory"
-                />
-                <br />
+                <label> Please Select Food Category </label>
+                <select class="form-control" formControlName="foodCategory">
+                  <option value="">Select</option>
+                  <option value="Burger">Burger</option>
+                  <option value="Noodle">Noodle</option>
+                  <option value="Pancake">Pancake</option>
+                  <option value="Pasta">Pasta</option>
+                  <option value="Pizza">Pizza</option>
+                  <option value="Salad">Salad</option>
+                  <option value="Sandwich">Sandwich</option>
+                  <option value="Soup">Soup</option>
+                </select>
                 <div>
                   <span
                     class="alert alert-danger"
@@ -29,16 +26,18 @@
                       this.searchForm.get('foodCategory').invalid &&
                       this.searchForm.get('foodCategory').touched
                     "
-                    >Please enter Food Category</span
+                    >Please Select Food Category</span
                   >
                 </div>
-              </div>
-              <div class="form-group text-center">
-                <button 
-                class="btn btn-success"
-                [disabled]="searchForm.invalid">
-                  Find Food for me
-                </button>
+
+                <div class="form-group text-center">
+                  <button
+                    class="btn btn-success"
+                    [disabled]="searchForm.invalid"
+                  >
+                    Find Food for me
+                  </button>
+                </div>
               </div>
             </div>
           </form>

@@ -1,1 +1,105 @@
-<p>add-new-food works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">Add New Food Item</div>
+        <div class="card-body">
+          <form [formGroup]="foodDetailsForm" (ngSubmit)="onSubmit()">
+            <div>
+              <div class="form-group">
+                <label>Food Name : </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="foodName"
+                />
+                <div>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="
+                      this.foodDetailsForm.get('foodName').invalid &&
+                      this.foodDetailsForm.get('foodName').touched
+                    "
+                    >Please enter Food Name</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Food Category : </label>
+                <select class="form-control" formControlName="foodCategory">
+                  <option value="">Select</option>
+                  <option value="Burger">Burger</option>
+                  <option value="Noodle">Noodle</option>
+                  <option value="Pancake">Pancake</option>
+                  <option value="Pasta">Pasta</option>
+                  <option value="Pizza">Pizza</option>
+                  <option value="Salad">Salad</option>
+                  <option value="Sandwich">Sandwich</option>
+                  <option value="Soup">Soup</option>
+                </select>
+                <div>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="
+                      this.foodDetailsForm.get('foodCategory').invalid &&
+                      this.foodDetailsForm.get('foodCategory').touched
+                    "
+                    >Please enter Food Category</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Price : </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  formControlName="price"
+                />
+                <div>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="
+                      this.foodDetailsForm.get('price').invalid &&
+                      this.foodDetailsForm.get('price').touched
+                    "
+                    >Please enter Price</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Image URL : </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="imageUrl"
+                />
+                <div>
+                  <span
+                    class="alert alert-danger"
+                    *ngIf="
+                      this.foodDetailsForm.get('imageUrl').invalid &&
+                      this.foodDetailsForm.get('imageUrl').touched
+                    "
+                    >Please enter Image URL</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group text-center">
+                <button
+                  class="btn btn-primary"
+                  [disabled]="foodDetailsForm.invalid"
+                >
+                  Add Food Item
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

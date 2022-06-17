@@ -1,7 +1,7 @@
 export class FoodModel {
-
+  public id?: number;
+  
   constructor(
-    public id: number,
     public image: string,
     public foodName: string,
     public foodCategory: string,

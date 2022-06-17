@@ -27,17 +27,6 @@ export class SearchComponent implements OnInit {
 
   onSubmit() {
     this.foodCategory = this.searchForm.value.foodCategory;    
-    // this.foodItems = this.foodService.getFoodItems(
-    //   this.searchForm.value.foodCategory
-    // );
-    // console.log(this.foodItems);
     this.router.navigate(['food-items'],{queryParams:{category: this.foodCategory}});
-
-    // onEdit() {
-    //   this.router.navigate(['edit'], {
-    //     relativeTo: this.activatedRoute,
-    //     queryParamsHandling: 'preserve',
-    //   });
-    // }
   }
 }

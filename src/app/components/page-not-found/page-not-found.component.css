@@ -1,0 +1,9 @@
+div {
+  margin-top: 20px;
+  min-width: 100%;
+}
+marquee {
+  font-family: fantasy;
+  font-size: xx-large;
+  font-weight: bold;
+}

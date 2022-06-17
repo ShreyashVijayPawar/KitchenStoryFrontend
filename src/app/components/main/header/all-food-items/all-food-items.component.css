@@ -1,3 +1,15 @@
+.no-products-msg {
+  text-align: center;
+  /* color: #dc3545 !important; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 2% 15% ;
+  background-color: darkgrey;
+}
+div p {
+  margin-bottom: 0px;
+}
 table {
     background-color: thistle;
     margin-bottom: 1%;
@@ -62,4 +74,8 @@ table {
     background: none;
     border: 0px;
     padding: 0px;
+  }
+
+  td button:hover {
+    background-color: #dc3545 !important;;
   }
