@@ -8,16 +8,18 @@ import { AuthComponent } from './components/auth/auth.component';
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { PasswordResetComponent } from './components/auth/password-reset/password-reset.component';
-import { AddNewFoodComponent } from './components/main/header/add-new-food/add-new-food.component';
-import { AllFoodItemsComponent } from './components/main/header/all-food-items/all-food-items.component';
-import { OrderPlacedComponent } from './components/main/header/food-items/order-placed/order-placed.component';
-import { OrderSummaryComponent } from './components/main/header/food-items/order-summary/order-summary.component';
-import { FoodItemsComponent } from './components/main/header/food-items/food-items.component';
-import { SearchComponent } from './components/main/header/search/search.component';
-import { HomeComponent } from './components/main/header/home/home.component';
+import { SearchComponent } from './components/main/others/search/search.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/main/footer/footer.component';
+import { MainComponent } from './components/main/main.component';
+import { FoodItemsComponent } from './components/main/others/food-items/food-items.component';
+import { OrderSummaryComponent } from './components/main/others/food-items/order-summary/order-summary.component';
+import { OrderPlacedComponent } from './components/main/others/food-items/order-placed/order-placed.component';
+import { AllFoodItemsComponent } from './components/main/others/all-food-items/all-food-items.component';
+import { AddNewFoodComponent } from './components/main/others/add-new-food/add-new-food.component';
+import { HomeComponent } from './components/main/others/home/home.component';
+import { FoodServiceService } from './services/food-service.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { FooterComponent } from './components/main/footer/footer.component';
     HomeComponent,
     PageNotFoundComponent,
     FooterComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { FooterComponent } from './components/main/footer/footer.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [FoodServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

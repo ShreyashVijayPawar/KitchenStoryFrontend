@@ -40,6 +40,6 @@ export class AddNewFoodComponent implements OnInit {
     // foodItem.image = this.foodDetailsForm.value.imageUrl;
     console.log(foodItem)
     this.foodService.addFoodItem(foodItem);
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
 }
