@@ -1,0 +1,65 @@
+table {
+    background-color: thistle;
+    margin-bottom: 1%;
+  }
+  
+  tr {
+    text-align: center;
+    color: darkslategray;
+  }
+  
+  th{
+    padding: 10px 2px;
+  }
+  
+  td {
+    padding: 2px;
+    vertical-align: middle;
+  }
+  
+  div.col-md-12 {
+    padding: 1% 10% 0%;
+  }
+  
+  /* Table Fields Styling */
+  .srNo-styling {
+    width: 5%;
+  }
+  .image-styling {
+    width: 20%;
+  }
+  .foodName-styling {
+    width: 30%;
+  }
+  .category-styling {
+    width: 15%;
+  }
+  .price-styling {
+    width: 10%;
+  }
+  .qty-styling {
+    width: 10%;
+  }
+  .purchase-styling {
+    width: 25%;
+  }
+  
+  img {
+    width: 90%;
+    height: 60%;
+  }
+  .td-image-styling {
+    padding: 2px 0px;
+    transition: 1s;
+  }
+  .td-image-styling:hover {
+    transform: scale(1.1);
+  }
+  button:hover {
+    background-color: #28a745;
+  }
+  a {
+    background: none;
+    border: 0px;
+    padding: 0px;
+  }

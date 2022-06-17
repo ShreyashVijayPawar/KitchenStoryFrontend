@@ -12,6 +12,7 @@ import { FoodServiceService } from 'src/app/services/food-service.service';
 export class SearchComponent implements OnInit {
   searchForm!: FormGroup;
   foodItems: FoodModel[];
+  foodCategory:string;
 
   constructor(
     private foodService: FoodServiceService,
@@ -25,13 +26,12 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Food Category: ' + this.searchForm.value.foodCategory);
-    
-    this.foodItems = this.foodService.getFoodItems(
-      this.searchForm.value.foodCategory
-    );
-    console.log(this.foodItems);
-    this.router.navigate(['food-items']);
+    this.foodCategory = this.searchForm.value.foodCategory;    
+    // this.foodItems = this.foodService.getFoodItems(
+    //   this.searchForm.value.foodCategory
+    // );
+    // console.log(this.foodItems);
+    this.router.navigate(['food-items'],{queryParams:{category: this.foodCategory}});
 
     // onEdit() {
     //   this.router.navigate(['edit'], {

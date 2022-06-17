@@ -1,0 +1,64 @@
+.container-fluid {
+  background: none;
+}
+div.col-md-12 {
+  padding: 0px;
+}
+div.card {
+  margin: 1% 20% 0%;
+}
+div.card-header {
+  padding: 0px;
+  background-color: peru;
+}
+div.card-body {
+  background-color: burlywood;
+}
+p {
+  text-align: center;
+  font-family: Franklin Gothic Medium, "Arial Narrow", Arial, sans-serif;
+  font-size: larger;
+}
+.card-title {
+  font-size: x-large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 0px;
+}
+div.card-body {
+  padding: 0px;
+}
+table {
+  margin-bottom: 0px;
+  border-color: black;
+}
+td {
+  padding: 5px;
+  width: 60%;
+  vertical-align: middle;
+}
+.greetMsg {
+  margin: 10px;
+}
+.row-title {
+  width: 20%;
+  font-weight: bold;
+}
+.td-image-styling {
+  text-align: center;
+  width: 50%;
+  transition: 1s;
+}
+.btn-styling {
+  text-align: center;
+  transition: 1s;
+}
+.td-image-styling:hover {
+  transform: scale(1.1);
+}
+.btn-primary:hover {
+  transform: scale(1.1);
+  background-color: #28a745;
+}

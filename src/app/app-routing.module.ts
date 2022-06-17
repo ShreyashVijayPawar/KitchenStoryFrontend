@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'add-new-food', component: AddNewFoodComponent },
   { path: 'search', component: SearchComponent },
   { path: 'food-items/food-item/:id', component: OrderPlacedComponent },
-  { path: 'order-summary', component: OrderSummaryComponent },
+  { path: 'food-items/food-item/order-summary/:id', component: OrderSummaryComponent },
+  // { path: 'order-summary', component: OrderSummaryComponent },
   { path: 'log-out', component: AuthComponent },
   { path: 'header', component: HeaderComponent },
   {

@@ -9,7 +9,7 @@ import { FoodServiceService } from 'src/app/services/food-service.service';
   styleUrls: ['./food-items.component.css'],
 })
 export class FoodItemsComponent implements OnInit {
-  allFoodItems: FoodModel[];
+  filteredFoodItems: FoodModel[];
 
   constructor(
     private foodService: FoodServiceService,
@@ -18,13 +18,8 @@ export class FoodItemsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.allFoodItems = this.foodService.foodItems;
+    let category: string;
+    category = this.activatedRoute.snapshot.queryParamMap.get('category');
+    this.filteredFoodItems = this.foodService.getFoodByCategory(category);
   }
-
-  // buyProduct(food:FoodModel) {
-  //   console.log(food.id);
-  //   let url:string = "food-items/" + food.id;
-
-  //   this.router.navigate([url]);
-  // }
 }

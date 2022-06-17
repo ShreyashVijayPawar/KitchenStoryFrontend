@@ -10,7 +10,7 @@ import { FoodServiceService } from 'src/app/services/food-service.service';
 })
 export class OrderPlacedComponent implements OnInit {
   foodItem: FoodModel;
-  qtyPurchase:number;
+  // qtyPurchase:number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -26,19 +26,17 @@ export class OrderPlacedComponent implements OnInit {
       //   this.server = server;
       // });
     });
-    this.qtyPurchase = 1;
+    // this.qtyPurchase = 1;
   }
 
-  inputValue(event){
-    console.log(event);
-    let qty:number = event.target.value;
-    console.log(qty);
-  }
+  // inputValue(event){
+  //   console.log(event);
+  //   let qty:number = event.target.value;
+  //   console.log(qty);
+  // }
 
-  placeOrder(){
-    this.router.navigate(['order-summary'], {
-      queryParams:{data:this.foodItem}
-    });
-  }
+  // placeOrder(){
+  //   this.router.navigate(['order-summary']);
+  // }
     
 }
