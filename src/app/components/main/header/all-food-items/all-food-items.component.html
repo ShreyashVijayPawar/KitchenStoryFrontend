@@ -16,10 +16,16 @@
             <tr *ngFor="let food of allFoodItems; let i = index">
               <td>{{ i + 1 }}</td>
               <td class="td-image-styling">
-                <img
+                <!-- <img
                   [src]="
                     './assets/' + food.foodCategory + '/' + food.foodName + '.jpg'
                   "
+                  alt="Image"
+                  width="30%"
+                  height="10%"
+                /> -->
+                <img
+                  [src]="food.image"
                   alt="Image"
                   width="30%"
                   height="10%"
