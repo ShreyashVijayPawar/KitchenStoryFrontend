@@ -14,6 +14,9 @@ import { OrderPlacedComponent } from './components/main/header/food-items/order-
 import { OrderSummaryComponent } from './components/main/header/food-items/order-summary/order-summary.component';
 import { FoodItemsComponent } from './components/main/header/food-items/food-items.component';
 import { SearchComponent } from './components/main/header/search/search.component';
+import { HomeComponent } from './components/main/header/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,15 @@ import { SearchComponent } from './components/main/header/search/search.componen
     OrderSummaryComponent,
     OrderPlacedComponent,
     AllFoodItemsComponent,
-    AddNewFoodComponent
+    AddNewFoodComponent,
+    HomeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

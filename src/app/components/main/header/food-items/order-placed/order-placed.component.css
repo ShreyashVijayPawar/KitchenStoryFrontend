@@ -1,0 +1,47 @@
+.container-fluid {
+  background: none;
+}
+div.col-md-12 {
+  padding: 0px;
+}
+div.card {
+  margin: 1% 20% 0%;
+}
+div.card-header {
+  padding: 0px;
+}
+.card-title {
+  font-size: xx-large;
+  font-family: fantasy;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 0px;
+}
+div.card-body {
+  padding: 0px;
+}
+table {
+  margin-bottom: 0px;
+}
+td {
+  padding: 5px;
+  width: 60%;
+}
+.row-title {
+  width: 40%;
+}
+.td-image-styling {
+  text-align: center;
+  transition: 1s;
+}
+td.btn-styling {
+  text-align: center;
+  transition: 1s;
+  }
+.td-image-styling:hover{
+  transform: scale(1.1);
+}
+.btn-primary:hover {
+  transform: scale(1.1);
+  background-color: #28a745;
+}

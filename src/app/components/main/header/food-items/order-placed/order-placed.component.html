@@ -1,1 +1,73 @@
-<p>order-placed works!</p>
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header">
+      <p class="card-title">Food Details</p>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped table-bordered table-hover">
+        <tbody>
+          <tr>
+            <td colspan="2" class="td-image-styling">
+              <img
+                [src]="
+                  './assets/' +
+                  foodItem.foodCategory +
+                  '/' +
+                  foodItem.foodName +
+                  '.jpg'
+                "
+                alt="Image"
+                width="25%"
+                height="8%"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="row-title">Food Id</td>
+            <td>{{ foodItem.id }}</td>
+          </tr>
+
+          <tr>
+            <td class="row-title">Food Name</td>
+            <td>{{ foodItem.foodName }}</td>
+          </tr>
+          <tr>
+            <td class="row-title">Food Category</td>
+            <td>{{ foodItem.foodCategory }}</td>
+          </tr>
+          <tr>
+            <td class="row-title">Food Price</td>
+            <td>{{ foodItem.price | currency:"INR" }}</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="btn-styling">
+              <!-- <a
+                [routerLink]="['order', foodItem.id]"
+                class="btn btn-primary"
+              > -->
+              <button class="btn btn-primary" (click)="placeOrder()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-credit-card"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
+                  />
+                  <path
+                    d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
+                  />
+                </svg>
+                Pay & Place Order
+              </button>
+              <!-- </a> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

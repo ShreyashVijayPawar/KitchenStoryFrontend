@@ -1,0 +1,15 @@
+.ng-touched .ng-invalid{
+    border: 1px solid red;
+}
+
+.card {
+    background-color: peru;
+    margin: 10%;
+}
+.card-header {
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: brown;
+    text-decoration: transparent;
+}
