@@ -1,11 +1,13 @@
 .container-fluid {
   background: none;
+  padding: 1% 15% 1%;
 }
 div.col-md-12 {
   padding: 0px;
 }
 div.card {
-  margin: 1% 20% 0%;
+  padding: 1% 20% 0%;
+  background: none;
 }
 div.card-header {
   padding: 0px;

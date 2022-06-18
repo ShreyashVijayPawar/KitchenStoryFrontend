@@ -33,13 +33,8 @@ export class AddNewFoodComponent implements OnInit {
       this.foodDetailsForm.value.foodCategory,
       this.foodDetailsForm.value.price,
     );
-
-    // foodItem.foodName = this.foodDetailsForm.value.foodName;
-    // foodItem.foodCategory = this.foodDetailsForm.value.foodCategory;
-    // foodItem.price = this.foodDetailsForm.value.price;
-    // foodItem.image = this.foodDetailsForm.value.imageUrl;
     console.log(foodItem)
     this.foodService.addFoodItem(foodItem);
-    this.router.navigate(['/home']);
+    this.router.navigate(['/main/welcome']);
   }
 }

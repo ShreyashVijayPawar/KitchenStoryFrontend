@@ -14,12 +14,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/main/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { FoodItemsComponent } from './components/main/others/food-items/food-items.component';
-import { OrderSummaryComponent } from './components/main/others/food-items/order-summary/order-summary.component';
-import { OrderPlacedComponent } from './components/main/others/food-items/order-placed/order-placed.component';
+import { OrderPlacedComponent } from './components/main/others/order-placed/order-placed.component';
 import { AllFoodItemsComponent } from './components/main/others/all-food-items/all-food-items.component';
 import { AddNewFoodComponent } from './components/main/others/add-new-food/add-new-food.component';
 import { HomeComponent } from './components/main/others/home/home.component';
 import { FoodServiceService } from './services/food-service.service';
+import { OrderSummaryComponent } from './components/main/others/order-summary/order-summary.component';
 
 @NgModule({
   declarations: [

@@ -27,6 +27,6 @@ export class SearchComponent implements OnInit {
 
   onSubmit() {
     this.foodCategory = this.searchForm.value.foodCategory;    
-    this.router.navigate(['food-items'],{queryParams:{category: this.foodCategory}});
+    this.router.navigate(['/main/food-items'],{queryParams:{category: this.foodCategory}});
   }
 }

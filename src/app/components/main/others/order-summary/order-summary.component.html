@@ -9,18 +9,6 @@
         <tbody>
           <tr>
             <td rowspan="4" class="td-image-styling">
-              <!-- <img
-                [src]="
-                  './assets/' +
-                  foodItem.foodCategory +
-                  '/' +
-                  foodItem.foodName +
-                  '.jpg'
-                "
-                alt="Image"
-                width="90%"
-                height="70%"
-              /> -->
               <img
                 [src]="foodItem.image"
                 alt="Image"
@@ -58,22 +46,14 @@
                     </svg>&nbsp;    
                 </p>
                 <div class="btn-styling">
-                <button [routerLink]="['/home']" class="btn btn-primary">
+                <button [routerLink]="['/main/welcome']" class="btn btn-primary">
                     Go Home
                 </button>
             </div>
             </td>
           </tr>
-          <!-- <tr>
-            <td colspan="3" class="btn-styling">
-              <button [routerLink]="['/']" class="btn btn-primary">
-                Go Home
-              </button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
-      
     </div>
   </div>
 </div>

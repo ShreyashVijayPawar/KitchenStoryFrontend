@@ -1,24 +1,16 @@
-.container-fluid {
-    margin: 0%;
-    padding: 0% 30%;
-    background-color: lightgrey;
-    background-clip: content-box;
+div {
+  padding-top: 15%;
+  min-width: 100%;
 }
-
-h1 {
-margin: 0px;
-width: 100%;
-text-align: center;
-font-style: italic;
-font-size: calc(2vw + 2vh + 2vmin);;
-font-weight: bolder;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+marquee {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: rgb(67, 19, 19);
+  min-height: 70%;
 }
-
-.color-overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: rgb(67, 19, 19);
-    /* color: black; */
+p {
+    text-align: center;
+    margin: 0% 40%;;
+    background-color: thistle;
 }

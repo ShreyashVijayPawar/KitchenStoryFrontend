@@ -6,8 +6,11 @@ div.col-md-12 {
 }
 div.card {
   margin: 1% 20% 0%;
+  background-color: darkgray;
+  border-radius: 5%;
 }
 div.card-header {
+  background-color: grey;
   padding: 0px;
 }
 .card-title {
@@ -28,6 +31,7 @@ td {
   width: 60%;
 }
 .row-title {
+  font-weight: bold;
   width: 40%;
 }
 .td-image-styling {
