@@ -23,13 +23,11 @@ export class OrderPlacedComponent implements OnInit {
       let foodId = +params['id'];
       this.foodService.getFoodById(foodId).subscribe(
         (res) => {
-          console.log(res);
           this.foodItem = res;
           alert(ErrorEnum.ORDER_PROCESSING);
           this.renderPage = true;
         },
         (error) => {
-          console.log(error);
           alert(ErrorEnum.JSON_CONNECTION_FAILED);
         }
       );

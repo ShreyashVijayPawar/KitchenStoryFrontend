@@ -1,7 +1,7 @@
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a
-      routerLink="./welcome"
+      routerLink="/api"
       [routerLinkActiveOptions]="{ exact: true }"
       routerLinkActive="active"
       class="navbar-brand nav-link"
@@ -27,7 +27,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="role === 'Admin'">
           <a
             routerLink="./all-food-items"
             routerLinkActive="active"
@@ -36,7 +36,7 @@
           >
         </li>
         &nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="role === 'Admin'">
           <a
             routerLink="./add-new-food"
             routerLinkActive="active"
@@ -45,7 +45,7 @@
           >
         </li>
         &nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="role === 'User'">
           <a routerLink="./search" routerLinkActive="active" class="nav-link h5"
             >Search Food</a
           >

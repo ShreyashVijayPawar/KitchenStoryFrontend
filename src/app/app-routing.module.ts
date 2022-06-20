@@ -13,6 +13,9 @@ import { PasswordResetComponent } from './components/auth/password-reset/passwor
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AdminAuthGuard } from './guard/admin-auth.guard';
+import { AuthenticationGuard } from './guard/authentication.guard';
+import { UserAuthGuard } from './guard/user-auth.guard';
 
 const routes: Routes = [
   {
@@ -29,14 +32,15 @@ const routes: Routes = [
     path: 'api',
     component: ApiComponent,
     children: [
-      { path: '', component: HomeComponent },
-      { path: 'all-food-items', component: AllFoodItemsComponent },
-      { path: 'add-new-food', component: AddNewFoodComponent },
-      { path: 'search', component: SearchComponent },
-      { path: 'food-items', component: FoodItemsComponent },
-      { path: 'food-items/food-item/:id', component: OrderPlacedComponent },
-      { path: 'order-summary/:id', component: OrderSummaryComponent },
-    ],
+      { path: '', component: HomeComponent, canActivate:[AuthenticationGuard]},
+      { path: 'all-food-items', component: AllFoodItemsComponent, canActivate:[AuthenticationGuard, AdminAuthGuard]},
+      { path: 'add-new-food', component: AddNewFoodComponent, canActivate:[AuthenticationGuard, AdminAuthGuard]},
+      { path: 'search', component: SearchComponent, canActivate:[AuthenticationGuard, UserAuthGuard]},
+      { path: 'food-items', component: FoodItemsComponent, canActivate:[AuthenticationGuard, UserAuthGuard] },
+      { path: 'food-items/food-item/:id', component: OrderPlacedComponent, canActivate:[AuthenticationGuard, UserAuthGuard] },
+      { path: 'order-summary/:id', component: OrderSummaryComponent, canActivate:[AuthenticationGuard, UserAuthGuard]},
+    ], 
+    canActivate:[AuthenticationGuard]
   },
   {
     path: 'page-not-found',
