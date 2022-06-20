@@ -1,1 +1,65 @@
-<p>sign-in works!</p>
+<div class="sign-in-form">
+  <div class="card">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+      <form [formGroup]="SignInForm" (ngSubmit)="onSubmit()">
+        <div>
+          <div class="form-group">
+            <label>User Id : </label>
+            <input type="text" class="form-control" formControlName="userId" />
+            <div>
+              <span
+                class="alert alert-danger"
+                *ngIf="
+                  this.SignInForm.get('userId').invalid &&
+                  this.SignInForm.get('userId').touched
+                "
+                >Please enter user id</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Password : </label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="password"
+            />
+            <div>
+              <span
+                class="alert alert-danger"
+                *ngIf="
+                  this.SignInForm.get('password').invalid &&
+                  this.SignInForm.get('password').touched
+                "
+                >Password should be minimum 8 and maximum 16 characters
+                long</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="pwd-rst-link">
+              <a [routerLink]="['password-reset']">Forgot password?</a>
+            </div>
+            <div class="new-user-link">
+              Don't have an account?<a [routerLink]="['sign-up']"
+                >Register here</a
+              >
+            </div>
+          </div>
+          <br />
+          <div class="form-group text-center">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="SignInForm.invalid"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

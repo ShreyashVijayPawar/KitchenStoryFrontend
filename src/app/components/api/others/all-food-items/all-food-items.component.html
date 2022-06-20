@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="no-products-msg text-danger" *ngIf="isListEmpty">
+        <p>No Food Items Found</p>
+        <p style="font-size: large">
+          (Please search with valid product categories as mentioned on search
+          page)
+        </p>
+      </div>
+
+      <div *ngIf="!isListEmpty">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="srNo-styling">Sr. No.</th>
+              <th class="image-styling">Image</th>
+              <th class="foodName-styling">Food Name</th>
+              <th class="category-styling">Food Category</th>
+              <th class="price-styling">Price</th>
+              <th class="purchase-styling">Purchase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let food of allFoodItems; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td class="td-image-styling">
+                <img
+                  [src]="food.image"
+                  [alt]="'{{' + food.image + '}} Image Not Found'"
+                  width="30%"
+                  height="10%"
+                />
+              </td>
+              <td>{{ food.foodName }}</td>
+              <td>{{ food.foodCategory }}</td>
+              <td>{{ food.price | currency: "INR" }}</td>
+              <td>
+                <button class="btn btn-primary" (click)="deleteFood(food.id)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,12 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <div class="no-products-msg text-danger" *ngIf="this.filteredFoodItems.length === 0">
+      <div class="no-products-msg text-danger" *ngIf="isCtgryListEmpty">
         <p> No Food Items Found </p>
-        <p style="font-size: large;"> (Please search with valid product categories as mentioned on search page) </p>
+        <p style="font-size: large;"> (No food items available with the food category provided) </p>
+        <p style="font-size: large; color: #28a745 !important;"> (Try to search food in another category) </p>
       </div>
-      <table class="table table-hover" *ngIf="this.filteredFoodItems.length !== 0">
+      <table class="table table-hover" *ngIf="!isCtgryListEmpty">
         <thead>
           <tr>
             <th class="srNo-styling">Sr. No.</th>
@@ -22,7 +23,7 @@
             <td class="td-image-styling">
               <img
                 [src]="food.image"
-                alt="Image"
+                [alt]="'{{' + food.image + '}} Image Not Found'"
                 width="30%"
                 height="10%"
               />

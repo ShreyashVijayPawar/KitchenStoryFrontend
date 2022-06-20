@@ -1,87 +1,58 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { FoodModel } from '../model/food-model';
-import * as uuid from 'uuid';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FoodServiceService {
   private apiHost = environment.apiHost;
+  private url: string;
   foodByCategory: FoodModel[] = [];
 
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
-  // Service Method 0 ------------------------------------------------------------------
-  getAllFoodItems(): FoodModel[] {
-    return this.AllFoodItems;
-  }
-  // // To Be uncommented after creating backend
-  // getFoodItems(category :string): Observable<FoodModel[]> {
-  //   let url: string = `${this.apiHost}/foodItems/${category}`;
-  //   return this.httpClient.get<FoodModel[]>(url);
-  // }
-
-  // Service Method 1 ------------------------------------------------------------------
-  getFoodByCategory(category: string): FoodModel[] {
-    this.foodByCategory = [];
-
-    for (let food of this.AllFoodItems) {
-      if (food.foodCategory === category) {
-        this.foodByCategory.push(food);
-      }
-    }
-
-    return this.foodByCategory;
+  // Service Methods - AllFoodItemsComponent ------------------------------------------------------------------
+  getAllFoodItems(): Observable<FoodModel[]> {
+    this.url = `${this.apiHost}/foods`;
+    return this.httpClient.get<FoodModel[]>(this.url);
   }
 
-  // logValues(array:FoodModel[]){
-  //   for (let food of array) {
-  //     console.log(food);
-  //   }
-  //   console.log();
-  // }
+  deleteFoodItem(id: number): Observable<any> {
+    this.url = `${this.apiHost}/foods/${id}`;
+    return this.httpClient.delete<any>(this.url);
+  }
 
-  // // To Be uncommented after creating backend
-  // getFoodItems(category :string): Observable<FoodModel[]> {
-  //   let url: string = `${this.apiHost}/foodItems/${category}`;
-  //   return this.httpClient.get<FoodModel[]>(url);
-  // }
+  // Service Methods - ADDFoodItemsComponent ------------------------------------------------------------------
+  addFoodItem(foodItem: FoodModel): Observable<FoodModel> {
+    this.url = `${this.apiHost}/foods`;
+    return this.httpClient.post<FoodModel>(this.url, foodItem);
+  }
+
+  // Service Methods - FoodItemsComponent ------------------------------------------------------------------
+  getFoodsByCategory(category: string): Observable<FoodModel[]> {
+    this.url = `${this.apiHost}/foods?foodCategory=${category}`;
+    return this.httpClient.get<FoodModel[]>(this.url);
+  }
 
   // Service Method 2 ------------------------------------------------------------------
-  getFoodById(id: number): FoodModel {
+  getFoodById(id: number): Observable<FoodModel> {
     let foodItem: FoodModel;
-    for (let food of this.AllFoodItems) {
-      if (food.id === id) {
-        foodItem = food;
-        break;
-      }
-    }
-    return foodItem;
+    this.url = `${this.apiHost}/foods/${id}`;
+    return this.httpClient.get<FoodModel>(this.url);
+
+    // for (let food of this.AllFoodItems) {
+    //   if (food.id === id) {
+    //     foodItem = food;
+    //     break;
+    //   }
+    // }
+    // return foodItem;
   }
-  // // To Be uncommented after creating backend
-  // getFoodItems(id :number): Observable<FoodModel> {
-  //   let url: string = `${this.apiHost}/foodItems/${id}`;
-  //   return this.httpClient.get<FoodModel>(url);
-  // }
 
   // Service Method 3 ------------------------------------------------------------------
-  generateOrderId() {
-    return uuid.v4();
-  }
-
-  // Service Method 4 ------------------------------------------------------------------
-  deleteFoodItem(id: number) {
-    console.log('Food ' + id + ' deleted successfully...');
-  }
-
-  addFoodItem(foodItem) {
-    console.log(foodItem);
-    let id = this.AllFoodItems.length;
-    foodItem.id = id + 1;
-    this.AllFoodItems.push(foodItem);
-    console.log(this.AllFoodItems);
-  }
 
   // Data ------------------------------------------------------------------
   AllFoodItems: FoodModel[] = [

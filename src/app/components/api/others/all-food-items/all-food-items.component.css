@@ -4,7 +4,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: xx-large;
   font-weight: bold;
-  margin: 2% 15% ;
+  margin: 2% 15%;
   background-color: darkgrey;
 }
 div p {
@@ -30,7 +30,7 @@ td {
 }
 
 div.col-md-12 {
-  padding: 1% 10% 0%;
+  padding: 1% 10% 3%;
 }
 
 /* Table Fields Styling */
@@ -68,10 +68,14 @@ img {
   transform: scale(1.1);
 }
 button:hover {
-  background-color: #28a745 !important;
+  background-color: #28a745;
 }
 a {
   background: none;
   border: 0px;
   padding: 0px;
+}
+
+td button:hover {
+  background-color: #dc3545 !important;
 }

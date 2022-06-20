@@ -1,0 +1,68 @@
+{
+  "users": [],
+  "foods": [
+    {
+      "id": 1,
+      "foodCategory": "Burger",
+      "price": 100,
+      "foodName": "Veg_Burger",
+      "image": "./assets/Burgers/Veg_Burger.jpg"
+    },
+    {
+      "id": 2,
+      "foodCategory": "Burger",
+      "price": 100,
+      "foodName": "Chicken_Loaded_Burger",
+      "image": "./assets/Burgers/Chicken_Loaded_Burger.jpg"
+    },
+    {
+      "id": 3,
+      "foodCategory": "Burger",
+      "price": 100,
+      "foodName": "Double_Dekker_Burger",
+      "image": "./assets/Burgers/Double_Dekker_Burger.jpg"
+    },
+    {
+      "id": 4,
+      "foodCategory": "Pasta",
+      "price": 100,
+      "foodName": "Pink_Sauce_Pasta",
+      "image": "./assets/Pastas/Pink_Sauce_Pasta.jpg"
+    },
+    {
+      "id": 5,
+      "foodCategory": "Pasta",
+      "price": 100,
+      "foodName": "Spaghetti",
+      "image": "./assets/Pastas/Spaghetti.jpg"
+    },
+    {
+      "id": 6,
+      "foodCategory": "Noodle",
+      "price": 100,
+      "foodName": "Beef_Noodle_Soup",
+      "image": "./assets/Noodles/Beef_Noodle_Soup.jpg"
+    },
+    {
+      "id": 7,
+      "foodCategory": "Salad",
+      "price": 100,
+      "foodName": "Fruit_Salad",
+      "image": "./assets/Salads/Fruit_Salad.jpg"
+    },
+    {
+      "image": "./assets/Burgers/Veg_Becon_Burger.jpg",
+      "foodName": "Veg_Becon_Burger",
+      "foodCategory": "Burger",
+      "price": 135,
+      "id": 8
+    },
+    {
+      "image": "./assets/Burgers/Paneer_Stuffed_Burger.jpg",
+      "foodName": "Paneer_Stuffed_Burger",
+      "foodCategory": "Burger",
+      "price": 245,
+      "id": 9
+    }
+  ]
+}

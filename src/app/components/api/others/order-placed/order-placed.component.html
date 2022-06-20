@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="renderPage">
   <div class="card">
     <div class="card-header">
       <p class="card-title">Food Details</p>
@@ -8,7 +8,7 @@
         <tbody>
           <tr>
             <td colspan="2" class="td-image-styling">
-              <img [src]="foodItem.image" alt="Image" width="25%" height="8%" />
+              <img [src]="foodItem.image" alt="Image Not Found" width="25%" height="8%" />
             </td>
           </tr>
           <tr>
@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td colspan="2" class="btn-styling">
-                <button class="btn btn-primary" [routerLink]="['/main/order-summary', foodItem.id]">
+                <button class="btn btn-primary" [routerLink]="['/api/order-summary', foodItem.id]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
