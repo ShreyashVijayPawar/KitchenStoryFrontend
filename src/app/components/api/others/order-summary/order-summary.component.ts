@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { ErrorEnum } from 'src/app/model/error-enum';
 import { FoodModel } from 'src/app/model/food-model';
 import { FoodServiceService } from 'src/app/services/food-service.service';
 import * as uuid from 'uuid';
@@ -27,12 +28,12 @@ export class OrderSummaryComponent implements OnInit {
           console.log(res);
           this.foodItem = res;
           this.orderId = this.generateOrderId();
-          alert('Order Placed. Your Order Id is ' + this.orderId);
+          alert(ErrorEnum.ORDER_PLACED_SUCCESS);
           this.renderPage = true;
         },
         (error) => {
           console.log(error);
-          alert('Not able to connect to JSON server while placing order.');
+          alert(ErrorEnum.JSON_CONNECTION_FAILED);
         }
       );
     });

@@ -8,7 +8,12 @@
         <tbody>
           <tr>
             <td colspan="2" class="td-image-styling">
-              <img [src]="foodItem.image" alt="Image Not Found" width="25%" height="8%" />
+              <img
+                [src]="foodItem.image"
+                alt="Image Not Found"
+                width="25%"
+                height="8%"
+              />
             </td>
           </tr>
           <tr>
@@ -30,24 +35,27 @@
           </tr>
           <tr>
             <td colspan="2" class="btn-styling">
-                <button class="btn btn-primary" [routerLink]="['/api/order-summary', foodItem.id]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-credit-card"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
-                    />
-                    <path
-                      d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
-                    />
-                  </svg>
-                  Pay & Place Order
-                </button>
+              <button
+                class="btn btn-primary"
+                [routerLink]="['/api/order-summary', foodItem.id]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-credit-card"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
+                  />
+                  <path
+                    d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
+                  />
+                </svg>
+                Pay & Place Order
+              </button>
             </td>
           </tr>
         </tbody>

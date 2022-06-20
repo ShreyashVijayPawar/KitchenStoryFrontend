@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ErrorEnum } from 'src/app/model/error-enum';
 import { FoodModel } from 'src/app/model/food-model';
 import { FoodServiceService } from 'src/app/services/food-service.service';
 
@@ -14,7 +15,6 @@ export class FoodItemsComponent implements OnInit {
 
   constructor(
     private foodService: FoodServiceService,
-    private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
 
@@ -30,10 +30,10 @@ export class FoodItemsComponent implements OnInit {
         } else {
           this.isCtgryListEmpty = false;
         }
-        alert("Data fetched successfully. List is Empty " + this.isCtgryListEmpty );
+        alert(ErrorEnum.DATA_FETCH_SUCCESS);
       },(error)=>{
         console.log(error);
-        alert("Not bale to connect JSON server while searching based on category");
+        alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );
   }

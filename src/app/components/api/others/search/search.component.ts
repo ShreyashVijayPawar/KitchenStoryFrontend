@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FoodModel } from 'src/app/model/food-model';
-import { FoodServiceService } from 'src/app/services/food-service.service';
 
 @Component({
   selector: 'app-search',
@@ -15,7 +14,6 @@ export class SearchComponent implements OnInit {
   foodCategory:string;
 
   constructor(
-    private foodService: FoodServiceService,
     private router: Router
   ) {}
 

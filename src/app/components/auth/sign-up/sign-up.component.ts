@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ErrorEnum } from 'src/app/model/error-enum';
 import { UserModel } from 'src/app/model/user-model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -37,27 +38,31 @@ export class SignUpComponent implements OnInit {
       this.SignUpForm.value.password
     );
 
-    this.userService.signingInUser(userModel).subscribe((res) => {
-      this.userResp = res;
-      if (this.userResp.length == 0) {
-        userModel.userRole = this.SignUpForm.value.userRole;
+    this.userService.signingInUser(userModel).subscribe(
+      (res) => {
+        this.userResp = res;
+        if (this.userResp.length == 0) {
+          userModel.userRole = this.SignUpForm.value.userRole;
 
-        this.userService.registerUser(userModel).subscribe((res) => {
-          console.log(res);
-          alert('User Added Successfully...');
-          this.router.navigate(['/']);
-        },(error)=>{
-          alert("Not able to connect to JSON Server while adding user");
-        });
-      } else {
-        this.SignUpForm.reset();
-        alert('User Id Already Exists. Please try again with different user Id...');
-        return;
+          this.userService.registerUser(userModel).subscribe(
+            (res) => {
+              console.log(res);
+              alert(ErrorEnum.REGISTRATION_SUCCESS);
+              this.router.navigate(['/']);
+            },
+            (error) => {
+              alert(ErrorEnum.JSON_CONNECTION_FAILED);
+            }
+          );
+        } else {
+          this.SignUpForm.reset();
+          alert(ErrorEnum.USER_ALREADY_EXISTS);
+          return;
+        }
+      },
+      (error) => {
+        alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
-    },(error)=>{
-      alert("Not able to connect to JSON Server while fetching user for validating while signing up user");
-    });
-
-    
+    );
   }
 }

@@ -43,7 +43,7 @@ const routes: Routes = [
     component: PageNotFoundComponent,
     data: { message: 'Page Not Found' },
   },
-  // { path: '**', redirectTo: 'page-not-found' },
+  { path: '**', redirectTo: 'page-not-found' },
 ];
 
 @NgModule({

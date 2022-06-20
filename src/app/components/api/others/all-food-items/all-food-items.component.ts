@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ErrorEnum } from 'src/app/model/error-enum';
 import { FoodModel } from 'src/app/model/food-model';
 import { FoodServiceService } from 'src/app/services/food-service.service';
 
@@ -13,9 +14,7 @@ export class AllFoodItemsComponent implements OnInit {
   isListEmpty: Boolean = false;
 
   constructor(
-    private foodService: FoodServiceService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
+    private foodService: FoodServiceService
   ) {}
 
   ngOnInit(): void {
@@ -34,9 +33,7 @@ export class AllFoodItemsComponent implements OnInit {
       },
       (error) => {
         console.log(error);
-        alert(
-          'Not able to connect to JSON server while fetching all food items'
-        );
+        alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );
   }
@@ -44,11 +41,11 @@ export class AllFoodItemsComponent implements OnInit {
   deleteFood(id: number) {
     this.foodService.deleteFoodItem(id).subscribe(
       (res) => {
-        alert('Food Item deleted successfully');
+        alert(ErrorEnum.FOOD_DELETION_SUCCESS);
       },
       (error) => {
         console.log(error);
-        alert('Not able to connect to JSON server while deleting food item');
+        alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );
     this.refresh();

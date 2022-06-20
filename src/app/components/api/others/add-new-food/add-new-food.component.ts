@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ErrorEnum } from 'src/app/model/error-enum';
 import { FoodModel } from 'src/app/model/food-model';
 import { FoodServiceService } from 'src/app/services/food-service.service';
 
@@ -36,14 +37,13 @@ export class AddNewFoodComponent implements OnInit {
     console.log(foodItem);
     this.foodService.addFoodItem(foodItem).subscribe(
       (res) => {
-        alert("Food Added Successfully");
+        alert(ErrorEnum.FOOD_ADD_SUCCESS);
         this.router.navigate(['/api']);
       },
       (error) => {
         console.log(error);
-        alert("Not able to connect to JSON Server while adding food item.");
+        alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );
-    
   }
 }

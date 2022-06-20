@@ -27,5 +27,4 @@ export class AuthComponent implements OnInit {
     let userModel = new UserModel(this.SignInForm.value.userId,this.SignInForm.value.password);
     this.userService.signingInUser(userModel);
   }
-
 }

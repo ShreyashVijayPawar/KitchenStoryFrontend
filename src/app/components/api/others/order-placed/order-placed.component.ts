@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ErrorEnum } from 'src/app/model/error-enum';
 import { FoodModel } from 'src/app/model/food-model';
 import { FoodServiceService } from 'src/app/services/food-service.service';
 
@@ -14,30 +15,24 @@ export class OrderPlacedComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private foodService: FoodServiceService,
-    private router:Router
+    private foodService: FoodServiceService
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
-      const foodId = +params['id'];
-      // this.foodItem = this.foodService.getFoodById(foodId);
-
+      let foodId = +params['id'];
       this.foodService.getFoodById(foodId).subscribe(
         (res) => {
           console.log(res);
           this.foodItem = res;
-          alert('Processing your order');
+          alert(ErrorEnum.ORDER_PROCESSING);
           this.renderPage = true;
         },
         (error) => {
           console.log(error);
-          alert('Not able to connect to JSON server while processing order.');
+          alert(ErrorEnum.JSON_CONNECTION_FAILED);
         }
       );
-      // this.foodService.getFoodById(id).subscribe((server: ServerModel) => {
-      //   this.server = server;
-      // });
     });
   }
     

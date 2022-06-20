@@ -1,5 +1,36 @@
 {
-  "users": [],
+  "users": [
+    {
+      "userId": "s1",
+      "password": "232063",
+      "userRole": "Admin",
+      "id": 1
+    },
+	{
+      "userId": "s2",
+      "password": "232063",
+      "userRole": "User",
+      "id": 2
+    },
+	{
+      "userId": "s3",
+      "password": "232063",
+      "userRole": "User",
+      "id": 3
+    },
+	{
+      "userId": "s4",
+      "password": "232063",
+      "userRole": "User",
+      "id": 4
+    },
+	{
+      "userId": "s5",
+      "password": "232063",
+      "userRole": "User",
+      "id": 5
+    }
+  ],
   "foods": [
     {
       "id": 1,
