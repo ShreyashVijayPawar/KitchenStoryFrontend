@@ -10,21 +10,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
-  SignInForm!: FormGroup;
 
-  constructor(
-    private userService: UserService,
-    private router: Router
-    ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.SignInForm = new FormGroup({
-      userId: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
-    });
-  }
-  onSubmit() {
-    let userModel = new UserModel(this.SignInForm.value.userId,this.SignInForm.value.password);
-    this.userService.signingInUser(userModel);
-  }
+  ngOnInit(): void { }
 }

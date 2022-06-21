@@ -46,8 +46,7 @@ export class SignUpComponent implements OnInit {
 
           this.userService.registerUser(userModel).subscribe(
             (res) => {
-              console.log(res);
-              alert(ErrorEnum.REGISTRATION_SUCCESS);
+              // alert(ErrorEnum.REGISTRATION_SUCCESS);
               this.router.navigate(['/']);
             },
             (error) => {

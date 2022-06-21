@@ -23,16 +23,13 @@ export class FoodItemsComponent implements OnInit {
     category = this.activatedRoute.snapshot.queryParamMap.get('category');
     this.foodService.getFoodsByCategory(category).subscribe(
       (res)=>{
-        console.log(res);
         this.filteredFoodItems = res;
         if (this.filteredFoodItems.length === 0) {
           this.isCtgryListEmpty = true;
         } else {
           this.isCtgryListEmpty = false;
         }
-        alert(ErrorEnum.DATA_FETCH_SUCCESS);
       },(error)=>{
-        console.log(error);
         alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );

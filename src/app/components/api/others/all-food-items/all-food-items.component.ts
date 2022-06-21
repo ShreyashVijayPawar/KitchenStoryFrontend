@@ -32,7 +32,6 @@ export class AllFoodItemsComponent implements OnInit {
         }
       },
       (error) => {
-        console.log(error);
         alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );
@@ -44,7 +43,6 @@ export class AllFoodItemsComponent implements OnInit {
         alert(ErrorEnum.FOOD_DELETION_SUCCESS);
       },
       (error) => {
-        console.log(error);
         alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );

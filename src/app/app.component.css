@@ -1,8 +1,6 @@
 div {
-  /* background-image: url("/assets/Background_Wallpaper.jpg"); */
   background-image: url("../assets/Background_Wallpaper.jpg");
   
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

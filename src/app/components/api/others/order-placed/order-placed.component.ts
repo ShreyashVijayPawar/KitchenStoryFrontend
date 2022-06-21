@@ -24,7 +24,6 @@ export class OrderPlacedComponent implements OnInit {
       this.foodService.getFoodById(foodId).subscribe(
         (res) => {
           this.foodItem = res;
-          alert(ErrorEnum.ORDER_PROCESSING);
           this.renderPage = true;
         },
         (error) => {

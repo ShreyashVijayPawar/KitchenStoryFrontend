@@ -12,10 +12,11 @@ export class UserAuthGuard implements CanActivate {
   constructor(private authService:AuthService, private router : Router){  }
 
   canActivate() {
-    if(this.authService.isUser){
+    if(this.authService.isUser()){
       return true;
     }
     alert(ErrorEnum.NOT_AUTHORIZED);
+    this.router.navigate(['/api']);
     return false;
   }
 }

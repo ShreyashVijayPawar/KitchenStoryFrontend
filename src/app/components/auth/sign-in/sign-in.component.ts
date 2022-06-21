@@ -26,7 +26,7 @@ export class SignInComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(5),
-        Validators.maxLength(16),
+        Validators.maxLength(16)
       ]),
     });
   }
@@ -49,7 +49,7 @@ export class SignInComponent implements OnInit {
           sessionStorage.setItem('password', this.userResp[0].password);
           sessionStorage.setItem('userRole', this.userResp[0].userRole);
           
-          alert(ErrorEnum.SIGN_IN_SUCCESS);
+          // alert(ErrorEnum.SIGN_IN_SUCCESS);
           this.router.navigate(['/api']);
         } else {
           this.SignInForm.reset();

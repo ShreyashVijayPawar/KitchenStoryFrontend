@@ -9,23 +9,22 @@ import { map, Observable } from 'rxjs';
 })
 export class UserService {
   private apiHost = environment.apiHost;
-  private userResponse: UserModel[];
   private url: string;
 
   constructor(private httpClient: HttpClient) {}
 
   signingInUser(userModel: UserModel): Observable<UserModel[]> {
-    this.url = `${this.apiHost}/users?userId=${userModel.userId}`;
+    this.url = `${this.apiHost}/subscribers?userId=${userModel.userId}`;
     return this.httpClient.get<UserModel[]>(this.url);
   }
 
   registerUser(userModel: UserModel): Observable<UserModel> {
-    this.url = `${this.apiHost}/users`;
+    this.url = `${this.apiHost}/subscribers`;
     return this.httpClient.post<UserModel>(this.url, userModel);
   }
 
   resetPassowrd(userModel: UserModel): Observable<UserModel> {
-    console.log("Inside Forgot Password" + userModel);
-      return this.httpClient.put<UserModel>(`${this.apiHost}/users/${userModel.id}`,userModel);
+    this.url = `${this.apiHost}/subscribers/${userModel.id}`;
+    return this.httpClient.put<UserModel>(this.url,userModel);
   }
 }

@@ -1,14 +1,13 @@
 div {
-    background-image: url("/assets/Background_Wallpaper.jpg");
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  
-    min-height: 85vh;
-    min-width: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
-  
+  background-image: url("/assets/Background_Wallpaper.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  min-height: 85vh;
+  min-width: 100%;
+  margin: 0px;
+  padding: 0px;
+}

@@ -37,11 +37,9 @@ export class AddNewFoodComponent implements OnInit {
     console.log(foodItem);
     this.foodService.addFoodItem(foodItem).subscribe(
       (res) => {
-        alert(ErrorEnum.FOOD_ADD_SUCCESS);
         this.router.navigate(['/api']);
       },
       (error) => {
-        console.log(error);
         alert(ErrorEnum.JSON_CONNECTION_FAILED);
       }
     );

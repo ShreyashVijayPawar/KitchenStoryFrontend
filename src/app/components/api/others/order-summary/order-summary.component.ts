@@ -27,7 +27,6 @@ export class OrderSummaryComponent implements OnInit {
         (res) => {
           this.foodItem = res;
           this.orderId = this.generateOrderId();
-          alert(ErrorEnum.ORDER_PLACED_SUCCESS);
           this.renderPage = true;
         },
         (error) => {

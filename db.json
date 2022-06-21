@@ -1,68 +1,346 @@
 {
-  "users": [],
+  "subscribers": [
+    {
+      "userId": "admin@simplilearn.com",
+      "password": "password",
+      "userRole": "Admin",
+      "id": 1
+    },
+	{
+      "userId": "user2@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 2
+    },
+	{
+      "userId": "user3@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 3
+    },
+	{
+      "userId": "user4@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 4
+    },
+	{
+      "userId": "user5@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 5
+    },
+	{
+      "userId": "user6@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 6
+    },
+	{
+      "userId": "user7@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 7
+    },
+	{
+      "userId": "user8@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 8
+    },
+	{
+      "userId": "user9@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 9
+    },
+	{
+      "userId": "user10@simplilearn.com",
+      "password": "password",
+      "userRole": "User",
+      "id": 10
+    }
+  ],
   "foods": [
     {
       "id": 1,
       "foodCategory": "Burger",
-      "price": 100,
-      "foodName": "Veg_Burger",
-      "image": "./assets/Burgers/Veg_Burger.jpg"
+      "price": 120,
+      "foodName": "Cheese Loaded Burger",
+      "image": "./assets/Burgers/Cheese_Loaded_Burger.jpg"
     },
     {
       "id": 2,
       "foodCategory": "Burger",
-      "price": 100,
-      "foodName": "Chicken_Loaded_Burger",
+      "price": 170,
+      "foodName": "Chicken Loaded Burger",
       "image": "./assets/Burgers/Chicken_Loaded_Burger.jpg"
     },
     {
       "id": 3,
       "foodCategory": "Burger",
-      "price": 100,
-      "foodName": "Double_Dekker_Burger",
+      "price": 130,
+      "foodName": "Double Dekker Burger",
       "image": "./assets/Burgers/Double_Dekker_Burger.jpg"
     },
     {
       "id": 4,
-      "foodCategory": "Pasta",
-      "price": 100,
-      "foodName": "Pink_Sauce_Pasta",
-      "image": "./assets/Pastas/Pink_Sauce_Pasta.jpg"
+      "foodCategory": "Burger",
+      "price": 90,
+      "foodName": "Fried Potato Burger",
+      "image": "./assets/Burgers/Fried_Potato_Burger.jpg"
     },
     {
       "id": 5,
-      "foodCategory": "Pasta",
-      "price": 100,
-      "foodName": "Spaghetti",
-      "image": "./assets/Pastas/Spaghetti.jpg"
+      "foodCategory": "Burger",
+      "price": 150,
+      "foodName": "Paneer Stuffed Burger",
+      "image": "./assets/Burgers/Paneer_Stuffed_Burger.jpg"
     },
-    {
+	{
       "id": 6,
       "foodCategory": "Noodle",
-      "price": 100,
-      "foodName": "Beef_Noodle_Soup",
+      "price": 160,
+      "foodName": "Beef Noodle Soup",
       "image": "./assets/Noodles/Beef_Noodle_Soup.jpg"
     },
     {
       "id": 7,
+      "foodCategory": "Noodle",
+      "price": 70,
+      "foodName": "Hakka Noodles",
+      "image": "./assets/Noodles/Hakka_Noodles.jpg"
+    },
+    {
+      "id": 8,
+      "foodCategory": "Noodle",
+      "price": 50,
+      "foodName": "Maggie",
+      "image": "./assets/Noodles/Maggie.jpg"
+    },
+    {
+      "id": 9,
+      "foodCategory": "Noodle",
+      "price": 90,
+      "foodName": "Mix Veg Noodles",
+      "image": "./assets/Noodles/Mix_Veg_Noodles.jpg"
+    },
+    {
+      "id": 10,
+      "foodCategory": "Noodle",
+      "price": 110,
+      "foodName": "Noodle Soup",
+      "image": "./assets/Noodles/Noodle_Soup.jpg"
+    },
+    {
+      "id": 11,
+      "foodCategory": "Pancake",
+      "price": 150,
+      "foodName": "American Pancakes",
+      "image": "./assets/Pancakes/American_Pancakes.jpg"
+    },
+    {
+      "id": 12,
+      "foodCategory": "Pancake",
+      "price": 180,
+      "foodName": "Brunch Pancakes",
+      "image": "./assets/Pancakes/Brunch_Pancakes.jpg"
+    },
+    {
+      "id": 13,
+      "foodCategory": "Pancake",
+      "price": 165,
+      "foodName": "Buck Wheat Pancakes",
+      "image": "./assets/Pancakes/Buck_Wheat_Pancakes.jpg"
+    },
+    {
+      "id": 14,
+      "foodCategory": "Pancake",
+      "price": 200,
+      "foodName": "Pancake Fig",
+      "image": "./assets/Pancakes/Pancake_Fig.jpg"
+    },
+    {
+      "id": 15,
+      "foodCategory": "Pancake",
+      "price": 215,
+      "foodName": "Pancakes With Honey",
+      "image": "./assets/Pancakes/Pancakes_With_Honey.jpg"
+    },
+	{
+      "id": 16,
+      "foodCategory": "Pasta",
+      "price": 140,
+      "foodName": "Gnoochi",
+      "image": "./assets/Pastas/Gnoochi.jpg"
+    },
+    {
+      "id": 17,
+      "foodCategory": "Pasta",
+      "price": 160,
+      "foodName": "Pesto",
+      "image": "./assets/Pastas/Pesto.jpg"
+    },
+    {
+      "id": 18,
+      "foodCategory": "Pasta",
+      "price": 90,
+      "foodName": "Pink Sauce Pasta",
+      "image": "./assets/Pastas/Pink_Sauce_Pasta.jpg"
+    },
+    {
+      "id": 19,
+      "foodCategory": "Pasta",
+      "price": 130,
+      "foodName": "Red Lentil Pasta",
+      "image": "./assets/Pastas/Red_Lentil_Pasta.jpg"
+    },
+    {
+      "id": 20,
+      "foodCategory": "Pasta",
+      "price": 210,
+      "foodName": "Sicily Palermo Prawn Pasta",
+      "image": "./assets/Pastas/Sicily_Palermo_Prawn_Pasta.jpg"
+    },
+    {
+      "id": 21,
+      "foodCategory": "Pizza",
+      "price": 210,
+      "foodName": "Black Olive Pizza",
+      "image": "./assets/Pizzas/Black_Olive_Pizza.jpg"
+    },
+    {
+      "id": 22,
+      "foodCategory": "Pizza",
+      "price": 200,
+      "foodName": "Bell Paper Pizza",
+      "image": "./assets/Pizzas/Bell_Paper_Pizza.jpg"
+    },
+    {
+      "id": 23,
+      "foodCategory": "Pizza",
+      "price": 170,
+      "foodName": "Cheese Burst Pizza",
+      "image": "./assets/Pizzas/Cheese_Burst_Pizza.jpg"
+    },
+    {
+      "id": 24,
+      "foodCategory": "Pizza",
+      "price": 250,
+      "foodName": "Cheesy Pepperoni Pizza",
+      "image": "./assets/Pizzas/Cheesy_Pepperoni_Pizza.jpg"
+    },
+    {
+      "id": 25,
+      "foodCategory": "Pizza",
+      "price": 310,
+      "foodName": "Chicken Sausage Pizza",
+      "image": "./assets/Pizzas/Chicken_Sausage_Pizza.jpg"
+    },
+	{
+      "id": 26,
       "foodCategory": "Salad",
-      "price": 100,
-      "foodName": "Fruit_Salad",
+      "price": 180,
+      "foodName": "Caesar Salad",
+      "image": "./assets/Salads/Caesar_Salad.jpg"
+    },
+    {
+      "id": 27,
+      "foodCategory": "Salad",
+      "price": 320,
+      "foodName": "Chicken Arugula Pasta Salad",
+      "image": "./assets/Salads/Chicken_Arugula_Pasta_Salad.jpg"
+    },
+    {
+      "id": 28,
+      "foodCategory": "Salad",
+      "price": 350,
+      "foodName": "Chicken Caesar Salad",
+      "image": "./assets/Salads/Chicken_Caesar_Salad.jpg"
+    },
+    {
+      "id": 29,
+      "foodCategory": "Salad",
+      "price": 130,
+      "foodName": "Fruit Salad",
       "image": "./assets/Salads/Fruit_Salad.jpg"
     },
     {
-      "image": "./assets/Burgers/Veg_Becon_Burger.jpg",
-      "foodName": "Veg_Becon_Burger",
-      "foodCategory": "Burger",
-      "price": 135,
-      "id": 8
+      "id": 30,
+      "foodCategory": "Salad",
+      "price": 275,
+      "foodName": "Peach Blueberry Arugula Fresh Fruit Salad",
+      "image": "./assets/Salads/Peach_Blueberry_Arugula_Fresh_Fruit_Salad.jpg"
+    },
+	{
+      "id": 31,
+      "foodCategory": "Sandwich",
+      "price": 180,
+      "foodName": "Avocado Toasts With Alfalfa Sandwich",
+      "image": "./assets/Sandwiches/Avocado_Toasts_With_Alfalfa_Sandwich.jpg"
     },
     {
-      "image": "./assets/Burgers/Paneer_Stuffed_Burger.jpg",
-      "foodName": "Paneer_Stuffed_Burger",
-      "foodCategory": "Burger",
-      "price": 245,
-      "id": 9
+      "id": 32,
+      "foodCategory": "Sandwich",
+      "price": 80,
+      "foodName": "Baked Sandwich",
+      "image": "./assets/Sandwiches/Baked_Sandwich.jpg"
+    },
+    {
+      "id": 33,
+      "foodCategory": "Sandwich",
+      "price": 140,
+      "foodName": "Beconand Cheese Sandwich",
+      "image": "./assets/Sandwiches/Beconand_Cheese_Sandwich.jpg"
+    },
+    {
+      "id": 34,
+      "foodCategory": "Sandwich",
+      "price": 40,
+      "foodName": "Bread Cheese",
+      "image": "./assets/Sandwiches/Bread_Cheese.jpg"
+    },
+    {
+      "id": 35,
+      "foodCategory": "Sandwich",
+      "price": 110,
+      "foodName": "Double Dekker Veg Sandwich",
+      "image": "./assets/Sandwiches/Double_Dekker_Veg_Sandwich.jpg"
+    },
+	{
+      "id": 36,
+      "foodCategory": "Soup",
+      "price": 220,
+      "foodName": "African Chicken Peanut Stew",
+      "image": "./assets/Soups/African_Chicken_Peanut_Stew.jpg"
+    },
+    {
+      "id": 37,
+      "foodCategory": "Soup",
+      "price": 255,
+      "foodName": "Healthy Vegan Broath",
+      "image": "./assets/Soups/Healthy_Vegan_Broath.jpg"
+    },
+    {
+      "id": 38,
+      "foodCategory": "Soup",
+      "price": 170,
+      "foodName": "Qualiflower Potato Squash Soup",
+      "image": "./assets/Soups/Qualiflower_Potato_Squash_Soup.jpg"
+    },
+    {
+      "id": 39,
+      "foodCategory": "Soup",
+      "price": 190,
+      "foodName": "Stuffed Paper Soup",
+      "image": "./assets/Soups/Stuffed_Paper_Soup.jpg"
+    },
+    {
+      "id": 40,
+      "foodCategory": "Soup",
+      "price": 280,
+      "foodName": "Sushi",
+      "image": "./assets/Soups/Sushi.jpg"
     }
   ]
 }

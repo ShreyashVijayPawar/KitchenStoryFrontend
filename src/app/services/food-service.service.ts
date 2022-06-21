@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { FoodModel } from '../model/food-model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { UserModel } from '../model/user-model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,6 @@ import { HttpClient } from '@angular/common/http';
 export class FoodServiceService {
   private apiHost = environment.apiHost;
   private url: string;
-  foodByCategory: FoodModel[] = [];
 
   constructor(private httpClient: HttpClient) {}
 
@@ -20,12 +20,12 @@ export class FoodServiceService {
     return this.httpClient.get<FoodModel[]>(this.url);
   }
 
-  deleteFoodItem(id: number): Observable<any> {
+  deleteFoodItem(id: number): Observable<FoodModel> {
     this.url = `${this.apiHost}/foods/${id}`;
-    return this.httpClient.delete<any>(this.url);
+    return this.httpClient.delete<FoodModel>(this.url);
   }
 
-  // Service Methods - ADDFoodItemsComponent ------------------------------------------------------------------
+  // Service Methods - AddFoodItemsComponent ------------------------------------------------------------------
   addFoodItem(foodItem: FoodModel): Observable<FoodModel> {
     this.url = `${this.apiHost}/foods`;
     return this.httpClient.post<FoodModel>(this.url, foodItem);
@@ -37,7 +37,7 @@ export class FoodServiceService {
     return this.httpClient.get<FoodModel[]>(this.url);
   }
 
-  // Service Method 2 ------------------------------------------------------------------
+  // Service Methods ------------------------------------------------------------------
   getFoodById(id: number): Observable<FoodModel> {
     let foodItem: FoodModel;
     this.url = `${this.apiHost}/foods/${id}`;
